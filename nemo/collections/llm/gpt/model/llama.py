@@ -131,6 +131,14 @@ class Llama3Config8B(Llama3Config):
     ffn_hidden_size: int = 14336
     num_attention_heads: int = 32
 
+@dataclass
+class Llama3ConfigTiny(Llama3Config):
+    rotary_base: int = 500_000
+    seq_length: int = 512
+    num_layers: int = 6
+    hidden_size: int = 1024
+    ffn_hidden_size: int = 4096
+    num_attention_heads: int = 16
 
 @dataclass
 class Llama3Config70B(Llama3Config):

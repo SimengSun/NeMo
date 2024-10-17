@@ -38,7 +38,6 @@ def wandb_logger(project: str, name: str, entity: Optional[str] = None) -> Confi
 
     return cfg
 
-
 @cli.factory(is_target_default=True)
 def default_log(
     dir: Optional[str] = None,
