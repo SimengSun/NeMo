@@ -102,6 +102,7 @@ def pretrain(
     log: Annotated[Optional[NeMoLogger], run.Config[NeMoLogger]] = None,
     resume: Annotated[Optional[AutoResume], run.Config[AutoResume]] = None,
     optim: Optional[OptimizerModule] = None,
+    tokenizer: Optional[TokenizerType] = None,
 ) -> Path:
     """
     Pretrains a model using the specified data and trainer, with optional logging, resuming, and optimization.
@@ -138,7 +139,7 @@ def pretrain(
         log=log,
         resume=resume,
         optim=optim,
-        tokenizer="data",
+        tokenizer=tokenizer,
     )
 
 
